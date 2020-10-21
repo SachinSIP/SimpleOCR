@@ -23,7 +23,7 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
 		print(content)
 		cv2.imshow("Frame", image)
 		cv2.waitKey(0)
-                gttsobject= gTTS(text=content, lang=language, slow=False)
+                gttsobject= gTTS(text=content, lang="en-us", slow=False)
                 gttsobject.save("voice.mp3") 
                 os.system("mpg321 voice.mp3")
 		break
